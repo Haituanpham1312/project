@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/page/employee.css">
+    <link rel="stylesheet" href="../content/font/fontawesome-5.15.1/css/all.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="m-logo-box">
+            <div class="m-toggle"></div>
+            <div class="m-logo-page"></div>
+        </div>
+        <div class="m-navbar-box">
+            <div class="m-menu-item menu-item-active">
+                <div class="m-menu-item-icon m-icon icon-dasboard"></div>
+                <div class="m-menu-item-text">Tổng quan</div>
+            </div>
+            <div class="m-menu-item">
+                <div class="m-menu-item-icon m-icon icon-report"></div>
+                <div class="m-menu-item-text">Báo cáo</div>
+            </div>
+            <div class="m-menu-item">
+                <div class="m-menu-item-icon  m-icon icon-customer"></div>
+                <div class="m-menu-item-text">Danh sách khách hàng</div>
+            </div>
+            <div class="m-menu-item">
+                <div class="m-menu-item-icon m-icon icon-setting"></div>
+                <div class="m-menu-item-text">Cài đặt</div>
+            </div>
+        </div>
+    </div>
+    <div class="header"></div>
+    <div class="content">
+        <!-- header -->
+        <div class="page-header">
+            <div class="page-header-title">Danh sách nhân viên</div>
+            <button id="btnAddEmployee" class="m-btn m-btn-icon m-icon icon-add-user icon-16 icon-left-16">Thêm mới nhân viên</button>
+        </div>
+        <!-- toolbar -->
+        <div class="page-toolbar">
+            <div class="page-toolbar-left">
+                <input type="text" class='m-input m-input-search' placeholder="Tìm kiếm thông tin" title="Mật khẩu không được phép để trống" />
+                <select class="m-combobox" name="" id="">
+                    <option value="">Phòng nhân sự</option>
+                    <option value="">Phòng tài chính</option>
+                </select>
+                <select class="m-combobox" name="" id="">
+                    <option value="">Giám đốc</option>
+                    <option value="">Nhân viên</option>
+                </select>
+            </div>
+            <div class="page-toolbar-right">
+                <button id="btnRefresh" onclick="loadData()" class="btn-refresh"></button>
+            </div>
+        </div>
+        <!-- table -->
+        <div class="m-grid">
+            <table id="tblEmployee" class="m-table" border="1">
+                <thead>
+                    <tr>
+                        <th id="test" class="text-align-left" style="width: 100px;">Mã nhân viên</th>
+                        <th class="text-align-left">Họ và tên</th>
+                        <th class="text-align-left" style="width: 50px;">Giới tính</th>
+                        <th class="text-align-center" style="width: 100px;">Ngày sinh</th>
+                        <th class="text-align-left" style="width: 100px;">Phòng ban</th>
+                        <th class="text-align-right" style="width: 150px;">Mức lương cơ bản</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <!-- paging -->
+        <div class="m-table-paging">
+            <div class="m-paging-left"> Hiển thị 1-10/100 nhân viên</div>
+            <div class="m-paging-center">
+                <div class="m-paging-first"></div>
+                <div class="m-paging-prev"></div>
+                <div class="m-paging-number">
+                    <div class="page-number">1</div>
+                    <div class="page-number">2</div>
+                    <div class="page-number">3</div>
+                    <div class="page-number">4</div>
+                    <div class="page-number">4</div>
+                </div>
+                <div class="m-paging-next"></div>
+                <div class="m-paging-last"></div>
+            </div>
+            <div class="m-paging-right">
+                <select class="m-combobox" name="" id="">
+                        <option value="10">10 nhân viên/ trang</option>
+                        <option value="10">20 nhân viên/ trang</option>
+                        <option value="10">30 nhân viên/ trang</option>
+                        <option value="10">40 nhân viên/ trang</option>
+                    </select>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="dlgPopup" class="m-dialog">
+        <div class="m-row">
+            <div class="m-popup" style="width:400px">
+                <div class="m-popup-header">
+                    <div class="m-popup-header-title">Đóng Form thông tin chung</div>
+                    <div id="btnCloseDialog" class="m-popup-close"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="m-popup-content">
+                    <div style="width: 100%;">
+
+                        <div class="m-row m-row-flex">
+                            <div class="m-col m-col-w50">
+                                <div class="m-label">Mã nhân viên</div>
+                                <input class="m-input" type="text" id="txtEmployeeCode">
+                            </div>
+                            <div class="m-col m-col-w50">
+                                <div class="m-label">Họ và tên</div>
+                                <input class="m-input" type="text" id="txtFullName">
+                            </div>
+                        </div>
+                        <div class="m-row m-row-flex">
+                            <div class="m-col m-col-w50">
+                                <div class="m-label">Ngày sinh</div>
+                                <input class="m-input" type="date" id="dtDateOfBirth">
+                            </div>
+                            <div class="m-col m-col-w50">
+                                <div class="m-label">Giới tính</div>
+                                <!-- <select id="cbxGender" class="m-combobox" name="" id="">
+                                    <option value="1">Nam</option>
+                                    <option value="0">Nữ</option>
+                                </select> -->
+                                <div id="cbxGender" class="mcombobox">
+                                    <input class="m-combobox" type="text" class="m-combobox-input">
+                                    <button tabindex="-1" class="m-combobox-button"><i class="fas fa-chevron-down"></i></button>
+                                    <div class="m-combobox-data">
+                                        <div class="m-combobox-item" value="1">Nam</div>
+                                        <div class="m-combobox-item" value="0">Nữ</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-row m-row-flex">
+                            <div class="m-col m-col-w50">
+                                <div class="m-label">Email</div>
+                                <input class="m-input" type="text" id="txtEmail">
+                            </div>
+                            <div class="m-col m-col-w50">
+                                <div class="m-label">Số điện thoại</div>
+                                <input class="m-input" type="text" id="txtPhoneNumber">
+                            </div>
+                        </div>
+                        <div class="m-row m-row-flex">
+                            <div class="m-col m-col-w100">
+                                <div class="m-label">Địa chỉ</div>
+                                <input class="m-input" type="text" id="txtAddress">
+                            </div>
+                        </div>
+                        <div class="m-row m-row-flex">
+                            <div class="m-col m-col-w50">
+                                <div class="m-label">Phòng ban</div>
+                                <!-- <select id="cbxDepartment" class="m-combobox" name="" id="">
+                                    <option value="142cb08f-7c31-21fa-8e90-67245e8b283e">Phòng Marketting</option>
+                                    <option value="17120d02-6ab5-3e43-18cb-66948daf6128">Phòng đào tạo</option>
+                                </select> -->
+
+                                <combobox api="cukcuk.fdfd" textDisplay="DepartmentName" ValueField="DepartmentId">
+
+                                </combobox>
+
+                                <div id="cbxDepartment" class="mcombobox">
+                                    <input class="m-combobox" type="text" class="m-combobox-input">
+                                    <button tabindex="-1" class="m-combobox-button"><i class="fas fa-chevron-down"></i></button>
+                                    <div class="m-combobox-data">
+                                        <!-- <div class="m-combobox-item" value="1">Nam</div>
+                                        <div class="m-combobox-item" value="0">Nữ</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-col m-col-w50">
+                                <div class="m-label">Mức lương cơ bản</div>
+                                <input class="m-input" type="text" id="txtSalary">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="m-popup-footer">
+                    <button id="btnCancel" class='m-btn m-btn-nobackground'>Hủy</button>
+                    <button id="btnSave" class='m-btn'>Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-loading">
+        <div class="m-loading-icon"></div>
+    </div>
+
+    <!-- thư viện js -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <!-- các js dùng chung -->
+    <script src="/lib/combobox/combobox.js"></script>
+    <!-- js dùng riêng -->
+    <script src="/js/page/employee.js"></script>
+
+</body>
+
+</html>

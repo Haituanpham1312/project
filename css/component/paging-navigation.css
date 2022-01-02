@@ -1,0 +1,88 @@
+.m-table-paging {
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    width: 100%;
+    height: 56px;
+    /* background-color: #E5E5E5; */
+    left: 0;
+    /* border: 1px solid #ddd; */
+}
+
+.m-table-paging .m-paging-left {
+    width: 200px;
+}
+
+.m-table-paging .m-paging-center {
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.m-table-paging .m-paging-right {
+    display: flex;
+    justify-content: right;
+}
+
+.m-table-paging .m-paging-first {
+    width: 32px;
+    height: 32px;
+    background-color: steelblue;
+    background-image: url('../../content/icon/btn-firstpage.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.m-table-paging .m-paging-prev {
+    width: 32px;
+    height: 32px;
+    background-color: rgb(83, 112, 136);
+    background-image: url('../../content/icon/btn-prev-page.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.m-table-paging .m-paging-number {
+    justify-content: center;
+    display: flex;
+    width: 32px;
+    height: 32px;
+}
+
+.m-table-paging .m-paging-next {
+    width: 32px;
+    height: 32px;
+    background-color: rgb(206, 36, 73);
+    background-image: url('../../content/icon/btn-next-page.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.m-table-paging .m-paging-last {
+    width: 32px;
+    height: 32px;
+    background-color: rgb(177, 185, 58);
+    background-image: url('../../content/icon/btn-lastpage.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.m-table-paging .page-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    margin: 0 4px;
+    cursor: pointer;
+    background-color: #019160;
+    color: #fff;
+}
+
+.m-table-paging .page-number:hover {
+    background-color: #2FBE8E;
+}

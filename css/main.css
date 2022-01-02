@@ -1,0 +1,33 @@
+@import url('./common/common.css');
+@import url('./component/button.css');
+@import url('./component/input.css');
+@import url('./component/combobox.css');
+@import url('./component//table.css');
+@import url('./component/paging-navigation.css');
+@import url('./component/toast-messenger.css');
+@import url('./component/popup.css');
+@import url('./component/icon.css');
+@import url('./layout/content.css');
+@import url('./layout/header.css');
+@import url('./layout/navbar.css');
+body {
+    font-family: GoogleSans;
+    font-size: 13px;
+    margin: 0;
+    min-width: 1024;
+}
+
+@font-face {
+    font-family: GoogleSans;
+    src: url('../content/font/GoogleSans-Regular.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Bold;
+    src: url('../content/font/GoogleSans-Bold.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Italic;
+    src: url('../content/font/GoogleSans-Italic.otf');
+}

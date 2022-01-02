@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần mềm quản lý nhà hàng - CUKCUK.VN</title>
+    <link rel="stylesheet" href="/content/font/fontawesome-5.15.1/css/all.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body style="min-height: 1000px;">
+    Welcome to superman sssss!
+    <br>
+    <div class="m-row">
+        <label class='m-label' for="m-btn">1. Button</label>
+        <button class='m-btn'>Thêm mới nhân viên</button>
+    </div>
+
+    <div class="m-row">
+        <label class='m-label' for="m-input">2. Input Default</label>
+        <input type="text" class='m-input' placeholder="hint text" />
+    </div>
+
+    <div class="m-row">
+        <label class='m-label' for="m-input">3. Input Default Error</label>
+        <input type="text" class='m-input m-input-error' placeholder="hint text" title="Mật khẩu không được phép để trống" />
+    </div>
+
+    <div class="m-row">
+        <label class='m-label' for="m-input">4. Input Search</label>
+        <input type="text" class='m-input m-input-search' placeholder="Tìm kiếm thông tin" title="Mật khẩu không được phép để trống" />
+    </div>
+
+    <div class="m-row">
+        <label class='m-label' for="m-input">5 Input Search error</label>
+        <input type="text" class='m-input m-input-search m-input-error' placeholder="Tìm kiếm thông tin" title="Mật khẩu không được phép để trống" />
+    </div>
+
+    <div class="m-row">
+        <label class='m-label' for="m-input">6. Combobox</label>
+        <select class="m-combobox" name="" id="">
+            <option value="1">Nam</option>
+            <option value="0">Nữ</option>
+        </select>
+    </div>
+
+    <div class="m-row">
+        <label class='m-label' for="m-input">7. Table</label>
+        <table class="m-table" border="1">
+            <thead>
+                <tr>
+                    <th class="text-align-left" style="width: 100px;">Mã nhân viên</th>
+                    <th class="text-align-left">Họ và tên</th>
+                    <th class="text-align-left" style="width: 50px;">Giới tính</th>
+                    <th class="text-align-center" style="width: 100px;">Ngày sinh</th>
+                    <th class="text-align-right" style="width: 150px;">Mức lương cơ bản</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-align-left">NV0001</td>
+                    <td class="text-align-left">Nguyễn Văn Mạnh</td>
+                    <td class="text-align-left">Nam</td>
+                    <td class="text-align-center">22/09/1998</td>
+                    <td class="text-align-right">50.000.000</td>
+                </tr>
+                <tr>
+                    <td class="text-align-left">NV0001</td>
+                    <td class="text-align-left">Nguyễn Văn An</td>
+                    <td class="text-align-left">Nam</td>
+                    <td class="text-align-center">22/09/1998</td>
+                    <td class="text-align-right"></td>
+                </tr>
+                <tr>
+                    <td class="text-align-left">NV0001</td>
+                    <td class="text-align-left">Nguyễn Thị Mơ</td>
+                    <td class="text-align-left">Nữ</td>
+                    <td class="text-align-center">22/09/2001</td>
+                    <td class="text-align-right">3.040.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="m-row">
+        <label class='m-label' for="m-input" style="color: brown;">8. Table with Paging</label>
+        <div class="m-grid">
+            <table class="m-table" border="1">
+                <thead>
+                    <tr>
+                        <th class="text-align-left" style="width: 100px;">Mã nhân viên</th>
+                        <th class="text-align-left">Họ và tên</th>
+                        <th class="text-align-left" style="width: 50px;">Giới tính</th>
+                        <th class="text-align-center" style="width: 100px;">Ngày sinh</th>
+                        <th class="text-align-right" style="width: 150px;">Mức lương cơ bản</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-align-left">NV0001</td>
+                        <td class="text-align-left">Nguyễn Văn Mạnh</td>
+                        <td class="text-align-left">Nam</td>
+                        <td class="text-align-center">22/09/1998</td>
+                        <td class="text-align-right">50.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-align-left">NV0001</td>
+                        <td class="text-align-left">Nguyễn Văn An</td>
+                        <td class="text-align-left">Nam</td>
+                        <td class="text-align-center">22/09/1998</td>
+                        <td class="text-align-right"></td>
+                    </tr>
+                    <tr>
+                        <td class="text-align-left">NV0001</td>
+                        <td class="text-align-left">Nguyễn Thị Mơ</td>
+                        <td class="text-align-left">Nữ</td>
+                        <td class="text-align-center">22/09/2001</td>
+                        <td class="text-align-right">3.040.000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="m-table-paging">
+                <div class="m-paging-left"> Hiển thị 1-10/100 nhân viên</div>
+                <div class="m-paging-center">
+                    <div class="m-paging-first"></div>
+                    <div class="m-paging-prev"></div>
+                    <div class="m-paging-number">
+                        <div class="page-number">1</div>
+                        <div class="page-number">2</div>
+                        <div class="page-number">3</div>
+                        <div class="page-number">4</div>
+                        <div class="page-number">4</div>
+                    </div>
+                    <div class="m-paging-next"></div>
+                    <div class="m-paging-last"></div>
+                </div>
+                <div class="m-paging-right">
+                    <select class="m-combobox" name="" id="">
+                        <option value="10">10 nhân viên/ trang</option>
+                        <option value="10">20 nhân viên/ trang</option>
+                        <option value="10">30 nhân viên/ trang</option>
+                        <option value="10">40 nhân viên/ trang</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="m-row">
+        <label class='m-label' for="m-input">8. TOAST MESSENGER</label>
+        <div class="m-toast-msg">
+            <div class="toast-msg-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <div class="toast-msg-text">Thêm mới thành công!</div>
+            <div class="toast-msg-close"><i class="fas fa-times"></i></div>
+        </div>
+        <br>
+        <br>
+        <div class="m-toast-msg">
+            <div class="toast-msg-icon m-icon-info"><i class="fas fa-info-circle"></i></div>
+            <div class="toast-msg-text">Thêm mới thành công!</div>
+            <div class="toast-msg-close m-icon-info"><i class="fas fa-times"></i></div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <label class='m-label' for="m-input">9. POP-UP CẢNH BÁO</label>
+    <br>
+    <button id="btnShowPopup" class='m-btn'>Hiển thị Popup</button>
+    <div id="dlgPopup" class="m-dialog">
+        <div class="m-row">
+
+            <div class="m-popup">
+                <div class="m-popup-header">
+                    <div class="m-popup-header-title">Đóng Form thông tin chung</div>
+                    <div id="btnCloseDialog" class="m-popup-close"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="m-popup-content">
+                    <div class="m-popup-icon m-icon-warning"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="m-popup-text">Bạn có chắc chắn muốn xóa Khách hàng này hay không?</div>
+                </div>
+                <div class="m-popup-footer">
+                    <button id="btnNext" class='m-btn m-btn-nobackground'>Hủy</button>
+                    <button id="btnClose" class='m-btn'>Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script>
+        document.getElementById('btnShowPopup').addEventListener('click', function() {
+            document.getElementById('dlgPopup').style.display = "block";
+        })
+
+        document.getElementById('btnCloseDialog').addEventListener('click', function() {
+            document.getElementById('dlgPopup').style.display = "none";
+        })
+    </script>
+</body>
+
+</html>

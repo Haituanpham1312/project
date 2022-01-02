@@ -1,0 +1,39 @@
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header-title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.page-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.page-toolbar .page-toolbar-left {
+    display: flex;
+}
+
+.page-toolbar .page-toolbar-left input {
+    margin-right: 10px;
+}
+
+.m-table-paging {
+    width: unset;
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 0px;
+}
+
+.m-grid {
+    flex: 1;
+    margin-bottom: 56px;
+    overflow: auto;
+}

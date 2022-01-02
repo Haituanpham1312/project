@@ -1,0 +1,6 @@
+.header {
+    float: left;
+    height: 48px;
+    width: calc(100% - 226px);
+    background-color: orchid;
+}
